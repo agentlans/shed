@@ -30,13 +30,13 @@ vec to_armadillo(double* x, int n) {
 	return v;
 }
 
-extern "C" double c_scalar_rejection(double* a, double* b, int n) {
+extern "C" double c_scalar_rejection(const double* a, const double* b, int n) {
 	vec av = to_armadillo(a, n);
 	vec bv = to_armadillo(b, n);
 	return scalar_rejection(av, bv);
 }
 
-extern "C" double c_scalar_projection(double* a, double* b, int n) {
+extern "C" double c_scalar_projection(const double* a, const double* b, int n) {
 	vec av = to_armadillo(a, n);
 	vec bv = to_armadillo(b, n);
 	return scalar_projection(av, bv);

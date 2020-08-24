@@ -14,8 +14,8 @@ double scalar_rejection(vec a, vec b);
 #ifdef __cplusplus
 extern "C" {
 #endif
-	double c_scalar_rejection(double* a, double* b, int n);
-	double c_scalar_projection(double* a, double* b, int n);
+	double c_scalar_rejection(const double* a, const double* b, int n);
+	double c_scalar_projection(const double* a, const double* b, int n);
 #ifdef __cplusplus
 }
 #endif
