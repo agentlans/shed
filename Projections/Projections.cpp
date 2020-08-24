@@ -22,7 +22,7 @@ double scalar_rejection(vec a, vec b) {
 }
 
 // Copies a C-style double array to Armadillo vector
-vec to_armadillo(double* x, int n) {
+vec to_armadillo(const double* x, int n) {
 	vec v(n);
 	for (int i = 0; i < n; ++i) {
 		v[i] = x[i];
